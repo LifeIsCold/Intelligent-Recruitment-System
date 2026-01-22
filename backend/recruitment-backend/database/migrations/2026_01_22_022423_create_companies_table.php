@@ -7,19 +7,17 @@ use Illuminate\Support\Facades\Schema;
 return new class extends Migration {
     public function up(): void
     {
-        Schema::create('cvs', function (Blueprint $table) {
+        Schema::create('companies', function (Blueprint $table) {
             $table->id();
-
-            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
-            $table->string('file_path')->nullable();
-            $table->longText('extracted_text')->nullable();
-
+            $table->string('name');
+            $table->foreignId('industry_id')->constrained()->cascadeOnDelete();
+            $table->text('description')->nullable();
             $table->timestamps();
         });
     }
 
     public function down(): void
     {
-        Schema::dropIfExists('cvs');
+        Schema::dropIfExists('companies');
     }
 };
