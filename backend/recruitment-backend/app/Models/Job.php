@@ -16,6 +16,12 @@ class Job extends Model
         'work_type',
         'work_time',
         'salary',
+        'required_skills',
+        'benefits',
+    ];
+
+    protected $casts = [
+        'required_skills' => 'array',
     ];
 
     public function company()

@@ -1,0 +1,368 @@
+/* JobSeekerLogin.css - Light Blue Professional Theme */
+
+.jobseeker-auth-container {
+  min-height: 100vh;
+  background: #f8fafc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 40px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.auth-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #1e40af;
+  letter-spacing: -0.025em;
+}
+
+.auth-header h2 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #3b82f6;
+  margin-top: 12px;
+  opacity: 0.9;
+}
+
+.auth-box {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(59, 130, 246, 0.08);
+  width: 100%;
+  max-width: 440px;
+  padding: 36px;
+  box-sizing: border-box;
+  border: 1px solid #e2e8f0;
+}
+
+.success-message {
+  background: #f0f9ff;
+  color: #0369a1;
+  padding: 14px 18px;
+  border-radius: 10px;
+  margin-bottom: 28px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #bae6fd;
+}
+
+.success-icon {
+  background: #0ea5e9;
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  font-weight: bold;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.auth-tabs {
+  display: flex;
+  margin-bottom: 28px;
+  border-radius: 10px;
+  background: #f1f5f9;
+  padding: 4px;
+  border: 1px solid #e2e8f0;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 14px 20px;
+  background: transparent;
+  border: none;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 8px;
+}
+
+.tab-btn.active {
+  color: #1e40af;
+  background: white;
+  box-shadow: 0 2px 8px rgba(30, 64, 175, 0.1);
+  font-weight: 600;
+}
+
+.tab-btn:not(.active):hover {
+  color: #3b82f6;
+  background: rgba(59, 130, 246, 0.05);
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #334155;
+  font-size: 0.95rem;
+}
+
+.form-group label::after {
+  content: '*';
+  color: #ef4444;
+  margin-left: 4px;
+}
+
+.form-group input {
+  padding: 14px 16px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  background: #f8fafc;
+  color: #1e293b;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.form-group input::placeholder {
+  color: #94a3b8;
+}
+
+.form-group small {
+  margin-top: 6px;
+  color: #64748b;
+  font-size: 0.85rem;
+}
+
+.submit-btn {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 16px;
+  border-radius: 10px;
+  font-size: 1.05rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 8px;
+}
+
+.submit-btn:hover {
+  background: #2563eb;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+.switch-link {
+  text-align: center;
+  margin-top: 24px;
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+.link-text {
+  color: #3b82f6;
+  cursor: pointer;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.link-text:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+
+.back-link {
+  margin-top: 32px;
+  text-align: center;
+  padding-top: 24px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.back-btn {
+  background: transparent;
+  border: 1px solid #cbd5e1;
+  color: #64748b;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  padding: 10px 20px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.back-btn:hover {
+  border-color: #94a3b8;
+  color: #475569;
+  background: #f8fafc;
+}
+
+.back-btn::before {
+  content: '←';
+  font-size: 1.1em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .auth-box {
+    padding: 28px 24px;
+    margin: 0 16px;
+  }
+  
+  .auth-header h1 {
+    font-size: 2.1rem;
+  }
+  
+  .auth-header h2 {
+    font-size: 1.1rem;
+  }
+  
+  .tab-btn {
+    padding: 12px 16px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-box {
+    padding: 24px 20px;
+  }
+  
+  .auth-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .auth-header h2 {
+    font-size: 1rem;
+  }
+  
+  .form-group input {
+    padding: 12px 14px;
+  }
+  
+  .submit-btn {
+    padding: 14px;
+  }
+}
+
+/* Animation for success message */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.success-message {
+  animation: fadeIn 0.3s ease;
+}
+
+/* Error Message Styles */
+.error-message {
+  background: #fee2e2;
+  border-left: 4px solid #ef4444;
+  color: #991b1b;
+  padding: 12px 16px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.95rem;
+  animation: slideDown 0.3s ease;
+}
+
+.error-message i {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.error-message p {
+  margin: 0;
+}
+
+/* Error Text for Form Fields */
+.error-text {
+  color: #ef4444;
+  font-size: 0.85rem;
+  margin-top: 4px;
+  display: block;
+  font-weight: 500;
+}
+
+/* Input Error State */
+.input-error {
+  border-color: #fca5a5 !important;
+  background-color: #fff7f7 !important;
+}
+
+.input-error:focus {
+  border-color: #ef4444 !important;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1) !important;
+}
+
+/* Submit Button Loading State */
+.submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.submit-btn:disabled:hover {
+  transform: none;
+}
+
+/* Optional: Add some subtle blue accents */
+.auth-header::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #3b82f6;
+  margin: 16px auto 0;
+  border-radius: 2px;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

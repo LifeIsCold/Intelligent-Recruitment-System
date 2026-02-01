@@ -10,6 +10,10 @@ class Company extends Model
         'name',
         'industry_id',
         'description',
+        'website',
+        'contact_person',
+        'contact_email',
+        'contact_phone',
     ];
 
     public function industry()

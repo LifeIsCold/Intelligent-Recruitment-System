@@ -8,17 +8,21 @@ class Cv extends Model
 {
     protected $fillable = [
         'user_id',
-        'file_path',
-        'extracted_text',
+        'original_filename',
+        'storage_path',
+        'mime_type',
+        'text_content',
+        'extracted_skills',
+        'parsed_at'
+    ];
+
+    protected $casts = [
+        'extracted_skills' => 'array',
+        'parsed_at' => 'datetime'
     ];
 
     public function user()
     {
         return $this->belongsTo(User::class);
-    }
-
-    public function applications()
-    {
-        return $this->hasMany(Application::class);
     }
 }

@@ -14,6 +14,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'phone',
         'role',
         'company_id',
     ];
@@ -32,5 +33,12 @@ class User extends Authenticatable
     public function cvs()
     {
         return $this->hasMany(Cv::class);
+    }
+
+    public function skills()
+    {
+        return $this->belongsToMany(Skill::class, 'user_skills')
+                    ->withPivot('proficiency')
+                    ->withTimestamps();
     }
 }

@@ -11,8 +11,16 @@ return new class extends Migration {
             $table->id();
 
             $table->foreignId('user_id')->constrained()->cascadeOnDelete();
-            $table->string('file_path')->nullable();
-            $table->longText('extracted_text')->nullable();
+
+            // Original uploaded file info
+            $table->string('original_filename')->nullable();
+            $table->string('storage_path')->nullable();
+            $table->string('mime_type')->nullable();
+
+            // Parsed/Extracted content
+            $table->longText('text_content')->nullable();
+            $table->json('extracted_skills')->nullable();
+            $table->timestamp('parsed_at')->nullable();
 
             $table->timestamps();
         });
