@@ -1,0 +1,5 @@
+1.User uploads CV in PDF or text format, which is stored and processed.
+2.System extracts technical skills and keywords from the CV using NLP.
+3.Recruiter creates a job description and selects required skills.
+4.System computes a similarity score between CV and job description using ML-based text similarity.
+5.System displays ranked candidate–job matches with matched and missing skills.

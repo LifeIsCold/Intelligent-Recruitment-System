@@ -1,0 +1,262 @@
+@import '../styles/shared.css';
+
+/* ApplyForJob-specific styles */
+.apply-job-modal {
+  background: white;
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-6);
+  width: 520px;
+  max-width: 90vw;
+  box-shadow: var(--shadow-xl);
+}
+
+.apply-job-modal.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-5);
+  padding-bottom: var(--spacing-4);
+  border-bottom: 2px solid var(--border-light);
+}
+
+.modal-header h3 i {
+  color: var(--primary-600);
+}
+
+/* CV Selection */
+.cv-selection {
+  margin-bottom: var(--spacing-5);
+}
+
+.selection-label {
+  display: block;
+  margin-bottom: var(--spacing-3);
+  font-weight: 600;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.selection-label i {
+  color: var(--primary-600);
+  width: 18px;
+}
+
+.cv-select {
+  width: 100%;
+  padding: var(--spacing-3) var(--spacing-4);
+  border: 2px solid var(--border-light);
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  background: white;
+  margin-bottom: var(--spacing-4);
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right var(--spacing-3) center;
+  background-size: 16px;
+}
+
+.cv-select:focus {
+  border-color: var(--primary-600);
+  box-shadow: 0 0 0 3px var(--primary-100);
+}
+
+.cv-select:disabled {
+  background-color: var(--gray-100);
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* No CVs Message */
+.no-cvs-message {
+  text-align: center;
+  padding: var(--spacing-8) var(--spacing-5);
+  background: var(--gray-100);
+  border-radius: var(--radius-lg);
+  border: 2px dashed var(--border-medium);
+}
+
+.no-cvs-message i {
+  font-size: 2.5rem;
+  color: var(--warning);
+  margin-bottom: var(--spacing-4);
+}
+
+.no-cvs-message p {
+  color: var(--text-muted);
+  margin-bottom: var(--spacing-5);
+}
+
+.upload-options {
+  display: flex;
+  gap: var(--spacing-3);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* CV Info */
+.cv-info {
+  background: var(--gray-100);
+  padding: var(--spacing-4);
+  border-radius: var(--radius-md);
+  border-left: 4px solid var(--primary-600);
+  font-size: 0.9rem;
+}
+
+.selected-cv-details p {
+  margin: var(--spacing-1) 0;
+  color: var(--text-secondary);
+}
+
+.skills-preview {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* Apply Actions */
+.apply-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--spacing-3);
+  margin-bottom: var(--spacing-4);
+}
+
+/* Apply Tips */
+.apply-tips {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  padding: var(--spacing-3);
+  background: var(--gray-100);
+  border-radius: var(--radius-md);
+}
+
+.apply-tips p {
+  margin: var(--spacing-1) 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-2);
+}
+
+.apply-tips i {
+  color: var(--primary-600);
+}
+
+.refresh-link {
+  background: none;
+  border: none;
+  color: var(--primary-600);
+  padding: 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+  display: inline;
+  width: auto;
+}
+
+.refresh-link:hover {
+  color: var(--primary-700);
+}
+
+/* Already Applied State */
+.already-applied-message {
+  text-align: center;
+  padding: var(--spacing-8) var(--spacing-5);
+  background: var(--gray-100);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-light);
+}
+
+.already-applied-message i {
+  font-size: 4rem;
+  color: var(--success);
+  margin-bottom: var(--spacing-4);
+}
+
+.already-applied-message h4 {
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-3);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.already-applied-message p {
+  color: var(--text-muted);
+  margin-bottom: var(--spacing-3);
+  font-size: 1rem;
+}
+
+.application-status {
+  background: white;
+  padding: var(--spacing-4);
+  border-radius: var(--radius-md);
+  margin: var(--spacing-5) 0;
+  font-size: 1rem;
+  border: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-2);
+  flex-wrap: wrap;
+}
+
+.already-applied-actions {
+  display: flex;
+  gap: var(--spacing-4);
+  justify-content: center;
+  margin-top: var(--spacing-6);
+  flex-wrap: wrap;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .apply-job-modal {
+    padding: var(--spacing-4);
+  }
+  
+  .cv-select {
+    font-size: 14px;
+    padding: var(--spacing-2) var(--spacing-3);
+  }
+  
+  .apply-actions {
+    flex-direction: column;
+  }
+  
+  .upload-options {
+    flex-direction: column;
+  }
+  
+  .already-applied-message {
+    padding: var(--spacing-5) var(--spacing-4);
+  }
+  
+  .already-applied-message h4 {
+    font-size: 1.3rem;
+  }
+  
+  .application-status {
+    flex-direction: column;
+    gap: var(--spacing-1);
+  }
+  
+  .already-applied-actions {
+    flex-direction: column;
+    gap: var(--spacing-2);
+  }
+}

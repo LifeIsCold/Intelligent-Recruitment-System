@@ -1,0 +1,47 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE / editor
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+pnpm-lock.yaml
+
+# Laravel / PHP
+/vendor/
+/.env
+/.env.*
+/storage/*.key
+/storage/framework/*
+/storage/logs/*
+/bootstrap/cache/*.php
+Homestead.json
+Homestead.yaml
+.env.backup
+
+# Build directories
+/public/storage
+/dist/
+build/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Misc
+*.log
+*.cache
+

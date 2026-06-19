@@ -1,0 +1,214 @@
+/* src/components/ScoringWeightsManager.css */
+.scoring-weights-manager {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 24px;
+  margin-top: 20px;
+  border: 1px solid #e0e0e0;
+  position: relative;
+}
+
+.weights-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.weights-header h3 {
+  margin: 0;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+.weights-header .badge {
+  background: #007bff;
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  border-radius: 12px;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #999;
+  padding: 5px;
+}
+
+.close-btn:hover {
+  color: #333;
+}
+
+.weights-description {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.presets-section {
+  margin-bottom: 24px;
+}
+
+.presets-section label {
+  font-weight: 600;
+  margin-bottom: 10px;
+  display: block;
+  color: #555;
+}
+
+.preset-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.preset-btn {
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 0.9rem;
+}
+
+.preset-btn:hover {
+  background: #e9ecef;
+  border-color: #007bff;
+}
+
+.preset-btn.active {
+  background: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.weights-form {
+  margin-bottom: 24px;
+}
+
+.weight-slider {
+  margin-bottom: 20px;
+}
+
+.weight-slider label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #555;
+}
+
+.weight-value {
+  color: #007bff;
+  font-weight: bold;
+}
+
+.weight-slider input {
+  width: 100%;
+  margin: 8px 0;
+}
+
+.weight-slider small {
+  color: #666;
+  font-size: 0.8rem;
+  display: block;
+  margin-top: 4px;
+}
+
+.weights-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #dee2e6;
+}
+
+.total-weight {
+  font-size: 1rem;
+}
+
+.total-weight .valid {
+  color: #28a745;
+  font-weight: bold;
+  margin-left: 8px;
+  font-size: 1.1rem;
+}
+
+.total-weight .invalid {
+  color: #dc3545;
+  font-weight: bold;
+  margin-left: 8px;
+  font-size: 1.1rem;
+}
+
+.total-weight .warning-msg {
+  color: #dc3545;
+  font-size: 0.85rem;
+  margin-left: 8px;
+}
+
+.weights-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.reset-btn, .save-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 0.9rem;
+}
+
+.reset-btn {
+  background: #6c757d;
+  color: white;
+}
+
+.reset-btn:hover {
+  background: #5a6268;
+}
+
+.save-btn {
+  background: #28a745;
+  color: white;
+}
+
+.save-btn:hover:not(:disabled) {
+  background: #218838;
+}
+
+.save-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.weights-loading {
+  text-align: center;
+  padding: 40px;
+}
+
+.spinner {
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #007bff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 15px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

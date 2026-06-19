@@ -1,0 +1,74 @@
+@startuml
+left to right direction
+
+' Actors
+actor Guest as guest
+actor "Job Seeker" as seeker
+actor Recruiter as recruiter
+actor System as system
+
+' Main container with two columns
+rectangle "Intelligent Recruitment System" {
+    usecase "Register" as UC_Register
+    usecase "Login" as UC_Login
+    usecase "View Site Statistics" as UC_ViewStats
+    usecase "View Industries/Skills" as UC_ViewPublic
+    usecase "Manage Profile" as UC_ManageProfile
+    usecase "Manage CVs" as UC_ManageCVs
+    usecase "Browse Jobs" as UC_BrowseJobs
+    usecase "Apply for Job" as UC_ApplyJob
+    usecase "View My Applications" as UC_ViewMyApps
+    usecase "View Application Details" as UC_ViewAppDetails
+    usecase "View CV Score History" as UC_ViewScoreHistory
+    usecase "Manage Notifications" as UC_ManageNotifs
+
+    usecase "Manage Profile" as UC_ManageProfileRec
+    usecase "Manage Jobs" as UC_ManageJobs
+    usecase "View Job Applications" as UC_ViewJobApps
+    usecase "Update Application Status" as UC_UpdateAppStatus
+    usecase "Provide Interview/Hire Details" as UC_ProvideDetails
+    usecase "View Application Statistics" as UC_ViewAppStats
+    usecase "Score CV" as UC_ScoreCV
+    usecase "Manage Notifications" as UC_ManageNotifsRec
+    usecase "Send Notifications" as UC_SendNotif
+    usecase "Score CV (external)" as UC_ScoreCVSystem
+    usecase "Update Site Statistics" as UC_UpdateStats
+}
+
+' Guest connections
+guest -- UC_Register
+guest -- UC_Login
+guest -- UC_ViewStats
+guest -- UC_ViewPublic
+
+' Job Seeker connections
+seeker -- UC_ManageProfile
+seeker -- UC_ManageCVs
+seeker -- UC_BrowseJobs
+seeker -- UC_ApplyJob
+seeker -- UC_ViewMyApps
+seeker -- UC_ViewAppDetails
+seeker -- UC_ViewScoreHistory
+seeker -- UC_ManageNotifs
+
+' Recruiter connections
+recruiter -- UC_ManageProfileRec
+recruiter -- UC_ManageJobs
+recruiter -- UC_ViewJobApps
+recruiter -- UC_UpdateAppStatus
+recruiter -- UC_ViewAppStats
+recruiter -- UC_ScoreCV
+recruiter -- UC_ManageNotifsRec
+
+' System connections
+system --> UC_SendNotif
+system --> UC_ScoreCVSystem
+system --> UC_UpdateStats
+
+' Relationships between use cases
+UC_ApplyJob ..> UC_ManageCVs : <<include>>\n(select CV)
+UC_UpdateAppStatus .> UC_ProvideDetails : <<include>>\n(shortlist/hire)
+UC_UpdateAppStatus .> UC_SendNotif : <<extend>>
+UC_ScoreCV ..> UC_ScoreCVSystem : <<uses>>
+
+@enduml

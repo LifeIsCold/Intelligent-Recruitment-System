@@ -1,0 +1,110 @@
+/* src/components/ProfilePictureUpload.css */
+.profile-picture-upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-picture-container {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.profile-picture-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-picture-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.profile-picture-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.profile-picture-container:hover .profile-picture-overlay {
+  opacity: 1;
+}
+
+.upload-btn, .remove-btn {
+  background: white;
+  border: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.upload-btn {
+  color: #4f46e5;
+}
+
+.upload-btn:hover:not(:disabled) {
+  background: #4f46e5;
+  color: white;
+  transform: scale(1.1);
+}
+
+.remove-btn {
+  color: #ef4444;
+}
+
+.remove-btn:hover:not(:disabled) {
+  background: #ef4444;
+  color: white;
+  transform: scale(1.1);
+}
+
+.upload-btn:disabled, .remove-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.uploading-indicator {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: #4f46e5;
+}
+
+.upload-help {
+  margin-top: 10px;
+  font-size: 0.75rem;
+  color: #6b7280;
+  text-align: center;
+  line-height: 1.4;
+}
