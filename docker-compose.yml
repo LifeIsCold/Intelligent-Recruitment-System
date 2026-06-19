@@ -1,0 +1,46 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.api
+    env_file:
+      - .env
+    environment:
+      CV_SCORING_SERVICE_URL: http://ml:8001
+    volumes:
+      - irs_data:/app/database
+      - irs_storage:/app/storage
+    expose:
+      - "8000"
+    depends_on:
+      ml:
+        condition: service_started
+    restart: unless-stopped
+
+  ml:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.ml
+    environment:
+      LM_STUDIO_URL: ${LM_STUDIO_URL:-http://host.docker.internal:1234}
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    expose:
+      - "8001"
+    restart: unless-stopped
+
+  web:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.web
+      args:
+        VITE_API_URL: /api
+    ports:
+      - "${IRS_PORT:-3000}:80"
+    depends_on:
+      - api
+    restart: unless-stopped
+
+volumes:
+  irs_data:
+  irs_storage:

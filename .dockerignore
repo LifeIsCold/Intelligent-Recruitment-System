@@ -1,0 +1,17 @@
+.git
+.vs
+node_modules
+vendor
+.env
+.env.*
+!.env.example
+backend/recruitment-backend/vendor
+backend/recruitment-backend/node_modules
+frontend/recruitment-frontend/node_modules
+frontend/recruitment-frontend/dist
+backend/recruitment-backend/storage/logs/*
+backend/recruitment-backend/storage/framework/cache/*
+backend/recruitment-backend/storage/framework/sessions/*
+backend/recruitment-backend/storage/framework/views/*
+__pycache__
+*.pyc

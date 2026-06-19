@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\JobController;
@@ -25,7 +26,7 @@ Route::options('/{any}', function () {
 
 // PUBLIC TEST ROUTE - Place this BEFORE any middleware
 Route::get('/test-python', function() {
-    $pythonUrl = env('CV_SCORING_SERVICE_URL', 'http://localhost:8001');
+    $pythonUrl = config('services.cv_scoring.url');
     
     try {
         $response = Http::timeout(5)->get($pythonUrl . '/health');

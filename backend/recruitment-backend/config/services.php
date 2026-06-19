@@ -35,4 +35,8 @@ return [
         ],
     ],
 
+    'cv_scoring' => [
+        'url' => env('CV_SCORING_SERVICE_URL', 'http://localhost:8001'),
+    ],
+
 ];

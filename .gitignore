@@ -23,6 +23,7 @@ pnpm-lock.yaml
 /vendor/
 /.env
 /.env.*
+!/.env.example
 /storage/*.key
 /storage/framework/*
 /storage/logs/*
